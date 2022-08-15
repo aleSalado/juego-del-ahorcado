@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="icon" href="assets/img/ahorcado-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/mensaje-error.css">
+    <link rel="stylesheet" href="assets/css/boton.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/inicio.css">
+    <link rel="stylesheet" href="assets/css/cambiar-palabra.css">
+    <link rel="stylesheet" href="assets/css/jugando.css">
+    <link rel="stylesheet" href="assets/css/ver-palabra.css">
+    <link rel="stylesheet" href="assets/css/desistir.css">
+    <link rel="stylesheet" href="assets/css/ganaste.css">
+    <link rel="stylesheet" href="assets/css/perdiste.css">
+
+</head>
+
+<body>
+
+    <section class="inicio flex-center-column">
+        <div class="inicio__contenido flex-center-column">
+            <h1 class="inicio__titulo">Ahorcado</h1>
+            <div class="inicio__botones">
+                <button class="inicio__boton--iniciar-juego boton" id="boton-iniciar-juego">Iniciar juego</button>
+                <button class="inicio__boton--cambiar-palabra boton" id="boton-cambiar-palabra"
+                    data-open="modal-cambiar-palabra">Cambiar Palabra</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="jugando container flex-center-column">
+        <div class="jugando__mostrar flex-center-column">
+            <div class="jugando__mostrar-personaje">
+                <canvas class="jugando__mostrar-personaje--canvas" id="personaje-canvas"></canvas>
+            </div>
+            <div class="jugando__mostrar-palabra"></div>
+            <div class="jugando__mostrar-fallidas"></div>
+        </div>
+        <div class="jugando__botones">
+            <button class="jugando__boton--nuevo-juego boton" id="boton-nuevo-juego"
+                data-open="modal-cambiar-palabra">Nuevo juego</button>
+            <button class="jugando__boton--desistir boton" id="boton-desistir" data-open="modal-desistir"
+                data-open2="modal-ver-palabra">Desistir</button>
+        </div>
+    </section>
+
+    <div class="modal flex-center-column" id="modal-cambiar-palabra">
+        <div class="modal__contenido cambiar-palabra flex-center-column">
+            <label class="label__cambiar-palabra flex-center-column" for="cambiar-palabra">
+                <h2 class="modal__cambiar-palabra--titulo modal-titulo">Cambiar palabra:</h2>
+                <input class="modal__cambiar-palabra--input" id="input-nueva-palabra" type="text" name="cambiar-palabra"
+                    maxlength="10" placeholder="Nueva palabra" spellcheck="false" autocomplete="off">
+            </label>
+            <button class="modal__boton--listo boton" id="boton-listo">Listo!</button>
+        </div>
+    </div>
+
+    <div class="modal flex-center-column" id="modal-desistir">
+        <div class="modal__contenido desistir flex-center-column">
+            <h2 class="modal__desistir--titulo modal-titulo">Te vas a rendir?</h2>
+            <div class="modal__desistir--botones">
+                <button class="modal__desistir-no--boton boton" id="boton-seguir-intentando" data-close>No</button>
+                <button class="modal__desistir-si--boton boton" data-open="modal-ver-palabra" id="boton-rendirse"
+                    data-close>Si</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal flex-center-column" id="modal-ver-palabra">
+        <div class="modal__contenido ver-palabra flex-center-column">
+            <h2 class="modal__ver-palabra--titulo">La palabra era:</h2>
+            <p class="modal__ver-palabra--palabra"></p>
+            <button class="modal__ver-palabra--boton-ok boton" id="boton-ok" data-close>OK</button>
+        </div>
+    </div>
+
+    <div class="modal flex-center-column" id="modal-ganaste">
+        <div class="modal__contenido ganaste flex-center-column">
+            <h2 class="modal__ganaste--titulo">GANASTE</h2>
+            <button class="modal__ganaste--boton boton" data-close>OK</button>
+        </div>
+    </div>
+
+    <div class="modal flex-center-column" id="modal-perdiste">
+        <div class="modal__contenido perdiste flex-center-column">
+            <h2 class="modal__perdiste--titulo">PERDISTE</h2>
+            <button class="modal__perdiste--boton boton" data-close>OK</button>
+        </div>
+    </div>
+
+    <script src="js/verificar-input.js"></script>
+    <script src="js/eliminar-tab.js"></script>
+    <script src="js/mover-inicio.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/resultado.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/animacion.js"></script>
+    <script src="js/crear-elemento.js"></script>
+    <script src="js/cambiar-palabra.js"></script>
+    <script src="js/iniciar-juego.js"></script>
+    <script src="js/restricciones.js"></script>
+    <script src="js/ahorcado.js"></script>
+</body>
+
+</html>

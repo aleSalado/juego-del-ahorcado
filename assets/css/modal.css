@@ -1,0 +1,44 @@
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+    z-index: 1;
+}
+
+.modal__contenido {
+    align-items: center;
+    gap: var(--gap-global);
+    position: relative;
+    bottom: 4rem;
+    width: 28rem;
+    height: 18rem;
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.modal-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media screen and (max-width:768px) {
+    .modal__contenido{
+        width: 24rem;
+        height: 16rem;
+    }
+}
+
+@media screen and (max-width:512px) {
+    .modal__contenido{
+        width: 22rem;
+        height: 14rem;
+    }
+}

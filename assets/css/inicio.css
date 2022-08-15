@@ -1,0 +1,53 @@
+.inicio {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(112deg, #202639 10%, #3f4c77 70%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.inicio__titulo {
+    line-height: 1;
+    margin: 1rem 0;
+    font-size: var(--font-size-titulo);
+    color: var(--azul-1);
+}
+
+.inicio__contenido {
+    margin-bottom: 10rem;
+}
+
+.inicio__botones {
+    display: flex;
+    gap: var(--gap-global);
+}
+
+.inicio__boton--iniciar-juego,
+.inicio__boton--cambiar-palabra {
+    background-color: var(--azul-2);
+    color: var(--azul-1);
+}
+
+.desplazar-inicio-izq {
+    left: -100vw;
+    transition: all .7s ease-in;
+}
+
+.desplazar-inicio-der {
+    left: 0vw;
+    transition: all .7s ease-in;
+}
+
+.boton-obligatorio{
+    animation: boton-obligatorio 2s ease-in;
+}
+
+@keyframes boton-obligatorio {
+    0% {
+        border-color: var(--rojo-2);
+    }
+}

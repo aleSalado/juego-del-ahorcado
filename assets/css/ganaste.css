@@ -1,0 +1,13 @@
+.ganaste{
+    background: radial-gradient(circle at 10% 20%, #577561 0%, #253727 100%);
+}
+
+.modal__ganaste--titulo{
+    font-size: var(--font-size-titulo);
+    color: var(--verde-1);
+}
+
+.modal__ganaste--boton{
+    background-color: var(--verde-2);
+    color: var(--verde-1);
+}

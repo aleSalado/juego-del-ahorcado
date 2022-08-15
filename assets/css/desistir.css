@@ -1,0 +1,20 @@
+.desistir {
+    background: linear-gradient(110deg, #574617 30%, #896c1e 80%);
+}
+
+.modal__desistir--botones{
+    display: flex;
+    gap: var(--gap-global);
+}
+
+.modal__desistir-si--boton,
+.modal__desistir-no--boton{
+    width: 4rem;
+    background-color: var(--amarillo-2);
+    color: var(--amarillo-1);
+}
+
+.modal__desistir--titulo{
+    color: var(--amarillo-1);
+    font-size: var(--font-size-modal-titulo);
+}

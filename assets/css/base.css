@@ -1,0 +1,49 @@
+:root {
+    --font-size-titulo: 64px;
+    --font-size-modal-titulo: 22px;
+
+    --azul-1: #c3c2ff;
+    --azul-2: #5858797e;
+
+    --rojo-1: #dbaaaa;
+    --rojo-2: #d18585cb;
+
+    --verde-1: #cadbaa;
+    --verde-2: #b4d185cb;
+
+    --amarillo-1: #d9dac1;
+    --amarillo-2: #c7c55acb;
+
+    --gris-1: #dde2e6;
+    --gris-2: #8c9091cb;
+
+    --blanco-1: #ebebeb;
+
+    --gap-global: 1.25rem;
+
+    --outline-none: none;
+    --text-decoration-none: none;
+    --user-select-none: none;
+    --cursor-default: default;
+
+    --quicksand: "Quicksand", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    user-select: var(--user-select-none);
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(112deg, #3f4c77 10%, #202639 70%);
+    background-position: center;
+    font-family: var(--quicksand);
+}
+
+.flex-center-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

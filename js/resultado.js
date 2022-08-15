@@ -1,0 +1,1 @@
+const resultado = id => document.getElementById(id).classList.add('modal-visible');

@@ -1,0 +1,19 @@
+.ver-palabra {
+    background: linear-gradient(110deg, #574617 30%, #896c1e 80%);
+}
+
+.modal__ver-palabra--boton-ok{
+    width: 4rem;
+    background-color: var(--amarillo-2);
+    color: var(--amarillo-1);
+}
+
+.modal__ver-palabra--palabra{
+    color: var(--amarillo-1);
+    font-size: 48px;
+}
+
+.modal__ver-palabra--titulo{
+    color: var(--amarillo-1);
+    font-size: var(--font-size-modal-titulo);
+}

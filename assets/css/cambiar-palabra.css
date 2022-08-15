@@ -1,0 +1,80 @@
+.cambiar-palabra {
+    background: radial-gradient(circle at 10% 20%, #7e7e7e 0%, #3d3d3d 100%);
+}
+
+.label__cambiar-palabra {
+    gap: var(--gap-global);
+}
+
+.modal__cambiar-palabra--titulo {
+    color: var(--gris-1);
+    font-size: var(--font-size-modal-titulo);
+}
+
+.modal__cambiar-palabra--input {
+    outline: var(--outline-none);
+    text-decoration: var(--text-decoration-none);
+    border: 1px solid var(--gris-1);
+    padding: 1rem;
+    text-align: center;
+    transition: all .5s;
+    background: var(--gris-1);
+    text-transform: uppercase;
+}
+
+.modal__cambiar-palabra--input::placeholder {
+    text-align: center;
+    color: var(--gris-2);
+    text-transform: capitalize;
+}
+
+.modal__cambiar-palabra--input:focus,
+.modal__cambiar-palabra--input:hover {
+    outline: var(--outline-none);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 2px, rgba(0, 0, 0, 0.08) 0px 2px 4px, rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 8px 16px, rgba(0, 0, 0, 0.08) 0px 16px 32px, rgba(0, 0, 0, 0.08) 0px 32px 64px;
+    background: var(--blanco-1);
+}
+
+.modal__boton--listo {
+    background-color: var(--gris-2);
+    color: var(--gris-1);
+}
+
+.boton-temblar {
+    animation: temblar 0.82s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+@keyframes temblar {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.input-obligatorio {
+    animation: input-obligatorio 2s ease-in;
+}
+
+@keyframes input-obligatorio {
+    0% {
+        background: var(--rojo-1);
+        border-color: var(--rojo-2);
+    }
+}

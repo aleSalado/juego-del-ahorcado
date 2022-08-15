@@ -1,0 +1,13 @@
+.perdiste{
+    background: radial-gradient(circle at 10% 20%, #964646 0%, #5c1d1d 75%);
+}
+
+.modal__perdiste--titulo{
+    font-size: var(--font-size-titulo);
+    color: var(--rojo-1);
+}
+
+.modal__perdiste--boton{
+    background-color: var(--rojo-2);
+    color: var(--rojo-1);
+}

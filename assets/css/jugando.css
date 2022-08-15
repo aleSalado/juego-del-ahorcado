@@ -1,0 +1,78 @@
+.jugando {
+    height: 100vh;
+}
+
+.jugando__mostrar-personaje {
+    height: 325px;
+}
+
+.jugando__mostrar-palabra {
+    cursor: var(--cursor-default);
+}
+
+.jugando__mostrar-palabra--letras {
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    width: 2.25rem;
+    font-size: 3rem;
+    padding-bottom: 1.2rem;
+    border-bottom: .2rem solid #7373ac;
+    border-radius: 2px;
+    margin: 1.5rem 1rem;
+    color: rgba(0, 0, 0, 0);
+    transition: all 0.5s;
+}
+
+.visible {
+    color: var(--azul-1);
+}
+
+.jugando__mostrar-fallidas {
+    height: 2rem;
+}
+
+.jugando__mostrar-fallidas--letras {
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    width: 2rem;
+    font-size: 1.5rem;
+    color: var(--azul-1);
+    cursor: var(--cursor-default);
+}
+
+.jugando__botones {
+    display: flex;
+    gap: var(--gap-global);
+    margin: 1.5rem 0 1rem;
+}
+
+.jugando__boton--nuevo-juego,
+.jugando__boton--desistir {
+    background-color: var(--azul-2);
+    color: var(--azul-1);
+}
+
+@media screen and (max-width:768px) {
+    .jugando__mostrar-palabra--letras {
+        width: 2rem;
+        font-size: 2rem;
+        margin: 1.5rem .6rem;
+    }
+    .jugando__mostrar-fallidas--letras {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width:512px) {
+    .jugando__mostrar-palabra--letras {
+        width: 1.6rem;
+        font-size: 1.6rem;
+        margin: 1.5rem .3rem;
+    }
+    .jugando__mostrar-fallidas--letras {
+        font-size: 1rem;
+    }
+}
+
