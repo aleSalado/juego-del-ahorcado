@@ -6,7 +6,7 @@ const ahorcado = function (intentos, saltarEvento) {
         palabra = palabraOculta.textContent,
         palabraVerificacion = palabraOculta.textContent,
         valorActual = 1;
-    const letraPrueba = (saltarEvento, caracter) => {
+    const letraPrueba = (saltarEvento, caracter, ) => {
         let inicio = document.querySelector('.inicio');
         let modales = document.querySelectorAll('.modal');
         for (let modal of modales) {
@@ -34,21 +34,19 @@ const ahorcado = function (intentos, saltarEvento) {
                 contenido += letraPresionada;
                 intentos--;
                 dibujarCuerpo(intentos);
-                if (!intentos) setTimeout(() => {
-                alert(intentos, 'porque!!?');
-                resultado('modal-perdiste'), 300});
+                if (!intentos) setTimeout(() => resultado('modal-perdiste'), 300);
             };
             incluido = false;
         }
     };
-    if (listoCantidad) letraPrueba(saltarEvento);
     const campoTexto = document.getElementById('probar-letra');
+    if (listoCantidad) letraPrueba(saltarEvento);
     campoTexto.addEventListener('input', (event) => {
         let saltarEvento = false;
-        console.log(campoTexto.value.substr(-1));
         let caracter = campoTexto.value.substr(-1);
         if (palabraVerificacion === palabraOculta.textContent){
             if (listoCantidad === valorActual || valorActual===1) letraPrueba(saltarEvento,caracter);
+        campoTexto.value = '';
         }
     })
 }

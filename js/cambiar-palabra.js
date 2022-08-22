@@ -22,8 +22,8 @@ function cambiarPalabra() {
     listoCantidad++;
     setTimeout(() => nuevaPalabra.value = '', 500);
 }
-
-/*const input = document.getElementById('input-nueva-palabra');
-input.addEventListener('input', ()=>{
-    alert(input.value.substr(-1));
-})*/
+const input =document.getElementById('input-nueva-palabra');
+input.addEventListener('input',()=>{
+    let letra = input.value.substr(-1);
+    if (restricciones(letra)) letra = '';
+})

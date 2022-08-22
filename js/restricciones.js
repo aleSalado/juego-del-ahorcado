@@ -1,7 +1,8 @@
 function restricciones(caracter) {
     const prohibiciones = {
         'Numeros': /[0-9]/,
-        'Caracteres especiales': /[!"#$%&'()*+,-./:;<=>?¡¿@[\]^_`{|}~]/,
+        'Caracteres especiales': /[!"#$%&'°()*+,-./:;<=>?¡¿@[\]^_`{|}~\n]/,
+        'Letras con acentos':/^[ÁÉÍÓÚ´ẂŔÝṔĹḰ´Ǵ´´ŚŹ´ĆǗ´ŃḾ]+$/
     };
     let error = '';
     let prohibicion = Object.keys(prohibiciones);
