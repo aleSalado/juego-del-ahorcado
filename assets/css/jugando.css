@@ -79,8 +79,8 @@
 .jugando__text-area{
     position: absolute;
     width: 90%;
-    height: 20%;
-    top: 50vh;
+    height: 15%;
+    top: 55vh;
     background-color: #fff;
-    opacity: .1;
+    opacity: 0;
 }
