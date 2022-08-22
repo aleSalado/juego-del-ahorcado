@@ -1,4 +1,4 @@
-const ahorcado = function (intentos, saltarEvento) {
+const ahorcado = function (event, intentos, saltarEvento) {
     let palabraOculta = document.querySelector('.jugando__mostrar-palabra'),
         letras = palabraOculta.querySelectorAll('.jugando__mostrar-palabra--letras'),
         incluido = false,
@@ -40,7 +40,8 @@ const ahorcado = function (intentos, saltarEvento) {
     };
     if (listoCantidad) letraPrueba(saltarEvento);
     const campoTexto = document.getElementById('probar-letra');
-    campoTexto.addEventListener('keydown', () => {
+    campoTexto.addEventListener('keydown', (event) => {
+        alert(event.key)
         let saltarEvento = false;
         if (palabraVerificacion === palabraOculta.textContent){
             if (listoCantidad === valorActual || valorActual===1) letraPrueba(saltarEvento);
