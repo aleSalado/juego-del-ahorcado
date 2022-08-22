@@ -76,3 +76,11 @@
     }
 }
 
+.jugando__text-area{
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    top: 50vh;
+    background-color: #fff;
+    opacity: .1;
+}

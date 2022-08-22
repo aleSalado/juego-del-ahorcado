@@ -39,7 +39,8 @@ const ahorcado = function (intentos, saltarEvento) {
         }
     };
     if (listoCantidad) letraPrueba(saltarEvento);
-    document.addEventListener('keydown', () => {
+    const campoTexto = document.getElementById('probar-letra');
+    campoTexto.addEventListener('keydown', () => {
         let saltarEvento = false;
         if (palabraVerificacion === palabraOculta.textContent){
             if (listoCantidad === valorActual || valorActual===1) letraPrueba(saltarEvento);
