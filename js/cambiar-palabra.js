@@ -25,5 +25,5 @@ function cambiarPalabra() {
 const input =document.getElementById('input-nueva-palabra');
 input.addEventListener('input',()=>{
     let letra = input.value.substr(-1);
-    if (restricciones(letra)) letra = '';
+    if (restricciones(letra)) input.value.substr(-1) = '';
 })
