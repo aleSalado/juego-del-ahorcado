@@ -6,7 +6,7 @@ input.addEventListener('input',()=>{
         input.value = input.value.replace(/.$/,'');
     }
     verificarInput();
-})
+}) 
 const verificarInput = function () {
     let input = document.getElementById('input-nueva-palabra');
     input.addEventListener("keydown", event => {

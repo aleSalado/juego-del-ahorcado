@@ -6,7 +6,7 @@ const ahorcado = function (intentos, saltarEvento) {
         palabra = palabraOculta.textContent,
         palabraVerificacion = palabraOculta.textContent,
         valorActual = 1;
-    const letraPrueba = (saltarEvento, caracter, ) => {
+    const letraPrueba = (saltarEvento, caracter, esLetra ) => {
         let inicio = document.querySelector('.inicio');
         let modales = document.querySelectorAll('.modal');
         for (let modal of modales) {
@@ -16,6 +16,7 @@ const ahorcado = function (intentos, saltarEvento) {
             for (let i = 0; i < listoCantidad; i++) valorActual++;
             return
         }
+        if (!esLetra) return
         let letraPresionada = caracter.toUpperCase();
         //let letraPresionada = event.key.toUpperCase();
         if (restricciones(letraPresionada) || letraPresionada === ' ' || !palabra || !intentos) return
@@ -41,11 +42,12 @@ const ahorcado = function (intentos, saltarEvento) {
     };
     const campoTexto = document.getElementById('probar-letra');
     if (listoCantidad) letraPrueba(saltarEvento);
-    campoTexto.addEventListener('input', (event) => {
+    campoTexto.addEventListener('input', () => {
         let saltarEvento = false;
         let caracter = campoTexto.value.substr(-1);
+        let esLetra = /[a-zA-ZñÑ]/.test(caracter);
         if (palabraVerificacion === palabraOculta.textContent){
-            if (listoCantidad === valorActual || valorActual===1) letraPrueba(saltarEvento,caracter);
+            if (listoCantidad === valorActual || valorActual===1) letraPrueba(saltarEvento,caracter, esLetra);
         campoTexto.value = '';
         }
     })

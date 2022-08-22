@@ -8,6 +8,10 @@ function cambiarPalabra() {
         animacion(botonListo, 'boton-temblar', 2000)
         return
     }
+    if(restricciones(nuevaPalabra.value)){
+        alert(restricciones(nuevaPalabra.value))
+        return
+    }
     dibujarCuerpo(8);
     let letrasFallidas = document.querySelector('.jugando__mostrar-fallidas');
     let palabraOculta = document.querySelector('.jugando__mostrar-palabra');
